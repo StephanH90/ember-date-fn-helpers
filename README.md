@@ -1,7 +1,7 @@
 ember-date-fn-helpers
 ==============================================================================
 
-[Short description of the addon.]
+Use Date-fns helpers (currently only `format`) in your Ember project.
 
 
 Compatibility
@@ -23,14 +23,15 @@ ember install ember-date-fn-helpers
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
-
-
-Contributing
-------------------------------------------------------------------------------
-
-See the [Contributing](CONTRIBUTING.md) guide for details.
-
+The addon provides a handlebar helper:
+```handlebars
+{{format-date this.someDateObject 'dd.MM.yyyy'}}
+```
+optionally you can provide a locale as well, which defaults to 'en' otherwise:
+```handlebars
+{{format-date this.someDateObject 'dd. MMMM yyyy' 'de'}}
+{{!-- which would produce "03. September 2021" as an example --}}
+```
 
 License
 ------------------------------------------------------------------------------
